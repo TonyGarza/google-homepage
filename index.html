@@ -2,6 +2,9 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> 
     <style>
       .main1{
         height: 100%;
@@ -53,9 +56,11 @@
        box-shadow:0 0 1px grey;
       }
       .toplink{
-        line-height: 50px;
+        
         text-align: center;
         display: inline-block;
+        margin-left: 15px;
+        font-family: Arial, Helvetica, sans-serif;
       }
       .botlink{
         line-height: 50px;
@@ -63,19 +68,35 @@
         text-align: center;
         display: inline-block;
       }
+      .dots{
+        height: 28px;
+        width: 28px;        
+      }
+      .dotbox{
+        border-radius: 50%;
+        padding: 5px;
+        background-color: gray;
+      }
+      .avatar{
+        border-radius: 50%;
+      }
+      .rightnav{
+        display: flex;
+        align-items: center;
+      }
     </style>
   </head>
   <div class="main1">
     <div class="header">
       <nav>
-        <a class="toplink" href="#">Link1</a>
-        <a class="toplink" href="#">Link2</a>
+        <a class="toplink" href="#">About</a>
+        <a class="toplink" href="#">Store</a>
       </nav>
-      <nav>
-        <a class="toplink" href="#">Link1</a>
-        <a class="toplink" href="#">Link2</a>
-        <a class="toplink" href="#">Link3</a>
-        <a class="toplink" href="#">Link4</a>
+      <nav class="rightnav">
+        <a class="toplink toplink2" href="#">Gmail</a>
+        <a class="toplink toplink2" href="#">Images</a>
+        <a class="toplink dotbox" href="#"><img src="icons/apps2.png" class = "dots" alt=""></a>
+        <a class="toplink" href="#"><img src="icons/m.png" class = "avatar" alt=""></a>
       </nav>
     </div>
     
