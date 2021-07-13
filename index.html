@@ -30,6 +30,7 @@
         margin: 0;
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
       }
       .mid{
         display: flex;
@@ -63,7 +64,6 @@
         font-family: Arial, Helvetica, sans-serif;
       }
       .botlink{
-        line-height: 50px;
         background-color: #f2f2f2;
         text-align: center;
         display: inline-block;
@@ -81,6 +81,23 @@
         border-radius: 50%;
       }
       .rightnav{
+        display: flex;
+        align-items: center;
+      }
+      .botnav1{
+        order: 2;
+        display: flex;
+        align-items: center;
+      }
+      .botnav2{
+        order: 1;
+        display: flex;
+        align-items:center;
+        justify-content: space-around; 
+        flex-basis: 100%;
+      }
+      .botnav3{
+        order: 3;
         display: flex;
         align-items: center;
       }
@@ -111,13 +128,13 @@
       </div>
     </div>
     <div class="footer">
-      <nav>
+      <nav class="botnav1">
         <a class="botlink" href="#">Link1</a>
         <a class="botlink" href="#">Link2</a>
         <a class="botlink" href="#">Link3</a>
       </nav>
-      <a class="botlink" href="#">LeafLink</a>
-      <nav>
+      <a class="botlink botnav2" href="#">LeafLink</a>
+      <nav class="botnav3">
         <a class="botlink" href="#">Link1</a>
         <a class="botlink" href="#">Link2</a>
         <a class="botlink" href="#">Link3</a>
