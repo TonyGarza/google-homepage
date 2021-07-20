@@ -1,148 +1,204 @@
-
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="content-type" content="text/html;charset=utf-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> 
-    <style>
-      .main1{
-        height: 100%;
-        padding: 0;
-        margin: 0;
+<!--Beginners Project for TOP Google Homepage Clone by Tony Garza-->
+
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <style>
+    html{
+      height: 100%;
+    }
+    body {
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .topnavs {
+      height: 50px;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .botnavs {
+      height: 50px;
+      width: 100%;
+      background-color: #f2f2f2;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .mid {
+      display: flex;
+      height: 100px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .mid-sec {
+      height: 35px;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      padding-bottom: 10px;
+    }
+
+    .logo {
+      display: block;
+      width: 50%;
+    }
+
+    #search-box {
+      background-image: url(icons/search.png);
+      background-repeat: no-repeat;
+      text-indent: 20px;
+      flex-basis: 600px;
+      border-radius: 25px;
+      line-height: 30px;
+    }
+
+    #search-box:focus {
+      outline: none;
+      border-color: grey;
+      box-shadow: 0 0 1px grey;
+    }
+
+    .toplink {
+
+      text-align: center;
+      display: inline-block;
+      margin-left: 15px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .botlink {
+      background-color: #f2f2f2;
+      text-align: center;
+      display: inline-block;
+    }
+
+    .dots {
+      height: 28px;
+      width: 28px;
+    }
+
+    .dotbox {
+      border-radius: 50%;
+      padding: 5px;
+      background-color: gray;
+    }
+
+    .avatar {
+      border-radius: 50%;
+    }
+
+    .rightnav {
+      display: flex;
+      align-items: center;
+    }
+
+    @media screen and (max-width: 600px) {
+      .botnav1 {
+        order: 2;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-      .header{
-        height: 50px;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: space-between;
-      }
-      .footer{
-        height: 50px;
-        width: 100%;
-        background-color: #f2f2f2;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-      }
-      .mid{
-        display: flex;
-        height: 100px;
-        flex-direction: column;
+        align-items: center;
+        flex-basis: 100%;
         justify-content: center;
-        align-items: center;
       }
-      .mid-sec{
-        height:50px; 
-        display: flex; 
-        width: 100%;  
-        justify-content: center; 
-      }
-      .logo{
-        display: block;
-        width: 50%;
-      }
-      .search-box{
-        background-image: url(icons/search.png);
-        background-repeat: no-repeat;
-        text-indent: 20px;
-        flex-basis: 600px;
-      }
-      .search-box:focus{
-       outline: none;
-       border-color: grey;
-       box-shadow:0 0 1px grey;
-      }
-      .toplink{
-        
-        text-align: center;
-        display: inline-block;
-        margin-left: 15px;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      .botlink{
-        background-color: #f2f2f2;
-        text-align: center;
-        display: inline-block;
-      }
-      .dots{
-        height: 28px;
-        width: 28px;        
-      }
-      .dotbox{
-        border-radius: 50%;
-        padding: 5px;
-        background-color: gray;
-      }
-      .avatar{
-        border-radius: 50%;
-      }
-      .rightnav{
+
+      .botnav2 {
+        order: 1;
         display: flex;
         align-items: center;
+        justify-content: space-around;
+        flex-basis: 100%;
       }
-      .botnav1{
+
+      .botnav3 {
+        order: 3;
+        display: flex;
+        align-items: center;
+        flex-basis: 100%;
+        justify-content: center;
+      }
+    }
+    @media screen and (max-width: 1150px) {
+      .botnav1 {
         order: 2;
         display: flex;
         align-items: center;
       }
-      .botnav2{
+
+      .botnav2 {
         order: 1;
         display: flex;
-        align-items:center;
-        justify-content: space-around; 
+        align-items: center;
+        justify-content: space-around;
         flex-basis: 100%;
       }
-      .botnav3{
+
+      .botnav3 {
         order: 3;
         display: flex;
         align-items: center;
       }
-    </style>
-  </head>
-  <div class="main1">
-    <div class="header">
-      <nav>
-        <a class="toplink" href="#">About</a>
-        <a class="toplink" href="#">Store</a>
-      </nav>
-      <nav class="rightnav">
-        <a class="toplink toplink2" href="#">Gmail</a>
-        <a class="toplink toplink2" href="#">Images</a>
-        <a class="toplink dotbox" href="#"><img src="icons/apps2.png" class = "dots" alt=""></a>
-        <a class="toplink" href="#"><img src="icons/m.png" class = "avatar" alt=""></a>
-      </nav>
-    </div>
+    }
     
-    <div class="mid">
-        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
-      <div class="mid-sec">
-        <input class="search-box" type="text">
-      </div>
-      <div class="mid-sec">
-        <input type="button" value="Google Search">
-        <input type="button" value="I'm Feeling Lucky">
-      </div>
-    </div>
-    <div class="footer">
-      <nav class="botnav1">
-        <a class="botlink" href="#">Link1</a>
-        <a class="botlink" href="#">Link2</a>
-        <a class="botlink" href="#">Link3</a>
-      </nav>
-      <a class="botlink botnav2" href="#">LeafLink</a>
-      <nav class="botnav3">
-        <a class="botlink" href="#">Link1</a>
-        <a class="botlink" href="#">Link2</a>
-        <a class="botlink" href="#">Link3</a>
-      </nav>
-    </div>     
+  </style>
+</head>
+<!--Body for the webpage-->
+<body>
+  <!--"topnavs" div for top nav links-->
+  <div class="topnavs">
+    <nav>
+      <a class="toplink" href="#">About</a>
+      <a class="toplink" href="#">Store</a>
+    </nav>
+    <nav class="rightnav">
+      <a class="toplink toplink2" href="#">Gmail</a>
+      <a class="toplink toplink2" href="#">Images</a>
+      <a class="toplink dotbox" href="#"><img src="icons/apps2.png" class="dots" alt=""></a>
+      <a class="toplink" href="#"><img src="icons/m.png" class="avatar" alt=""></a>
+    </nav>
   </div>
+  <!--"mid" div for Logo and search bar-->
+  <div class="mid">
+    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
+    <div class="mid-sec">
+      <input id="search-box" type="text">
+    </div>
+    <div class="mid-sec">
+      <input type="button" value="Google Search">
+      <input type="button" value="I'm Feeling Lucky">
+    </div>
+  </div>
+  <!--"botnavs" div for bottom nav links-->
+  <div class="botnavs">
+    <nav class="botnav1">
+      <a class="botlink" href="#">Link1</a>
+      <a class="botlink" href="#">Link2</a>
+      <a class="botlink" href="#">Link3</a>
+    </nav>
+    <a class="botlink botnav2" href="#">LeafLink</a>
+    <nav class="botnav3">
+      <a class="botlink" href="#">Link1</a>
+      <a class="botlink" href="#">Link2</a>
+      <a class="botlink" href="#">Link3</a>
+    </nav>
+  </div>
+</body>
+
 </html>
