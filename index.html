@@ -23,6 +23,7 @@
     .topnavs {
       height: 50px;
       width: 100%;
+      font-size: 14px;
       padding: 0;
       margin: 0;
       display: flex;
@@ -86,14 +87,18 @@
       background-position-y: 7px;
       text-indent: 30px;
       flex-basis: 600px;
+      line-height: 34px;
+      border: none;
       border-radius: 25px;
-      line-height: 35px;
+      outline: 2px solid #dfe1e5;
+    }
+
+    #search-box:hover {
+      box-shadow: 0 1px 6px #202124;
     }
 
     #search-box:focus {
-      outline: none;
-      border-color: grey;
-      box-shadow: 0 0 1px grey;
+      box-shadow: 0 1px 6px #202124;
     }
 
     .toplink {
@@ -127,6 +132,11 @@
     }
 
     .rightnav {
+      display: flex;
+      align-items: center;
+    }
+
+    .leftnav{
       display: flex;
       align-items: center;
     }
@@ -184,13 +194,13 @@
 <body>
   <!--"topnavs" div for top nav links-->
   <div class="topnavs">
-    <nav>
+    <nav class="leftnav">
       <a class="toplink" href="#">About</a>
       <a class="toplink" href="#">Store</a>
     </nav>
     <nav class="rightnav">
-      <a class="toplink toplink2" href="#">Gmail</a>
-      <a class="toplink toplink2" href="#">Images</a>
+      <a class="toplink" href="#">Gmail</a>
+      <a class="toplink" href="#">Images</a>
       <a class="toplink dotbox" href="#"><img src="icons/apps2.png" class="dots" alt=""></a>
       <a class="toplink" href="#"><img src="icons/m.png" class="avatar" alt=""></a>
     </nav>
