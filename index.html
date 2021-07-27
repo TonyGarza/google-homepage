@@ -30,9 +30,36 @@
       justify-content: space-between;
     }
 
+    a.toplink:link{
+      color:#222;
+      text-decoration: none;
+    }
+
+    a.toplink:visited{
+      color: #222;
+    }
+
+    a.toplink:hover{
+      text-decoration: underline;
+    }
+
+    a.botlink{
+      color:gray;
+      text-decoration: none;
+    }
+
+    a.botlink:visited{
+      color:gray;
+    }
+
+    a.botlink:hover{
+      text-decoration: underline;
+    }
+
     .botnavs {
       height: 50px;
       width: 100%;
+      font-size: 14px;
       background-color: #f2f2f2;
       padding: 0;
       margin: 0;
@@ -80,17 +107,17 @@
     }
 
     #search-box {
-      background-image: url(icons/search.png);
+      background-image: url(icons/search2.png);
       background-repeat: no-repeat;
       background-size: 20px 20px;
       background-position-x: 7px;
       background-position-y: 7px;
       text-indent: 30px;
-      flex-basis: 600px;
-      line-height: 34px;
+      flex-basis: 580px;
+      line-height: 44px;
       border: none;
       border-radius: 25px;
-      outline: 2px solid #dfe1e5;
+      outline: 1px solid #dfe1e5;
     }
 
     #search-box:hover {
@@ -113,6 +140,7 @@
       background-color: #f2f2f2;
       text-align: center;
       display: inline-block;
+      padding: 15px 15px;
     }
 
     .dots {
@@ -139,6 +167,24 @@
     .leftnav{
       display: flex;
       align-items: center;
+    }
+
+    .leaf{
+      width: 12px;
+      height: 12px;
+      margin-right: 3px;
+    }
+
+    .botnav1{
+      display: flex;
+      justify-content: flex-start;
+      width: 500px;
+    }
+
+    .botnav3{
+      display: flex;
+      justify-content: flex-end;
+      width: 500px;
     }
 
     @media screen and (max-width: 600px) {
@@ -201,7 +247,7 @@
     <nav class="rightnav">
       <a class="toplink" href="#">Gmail</a>
       <a class="toplink" href="#">Images</a>
-      <a class="toplink dotbox" href="#"><img src="icons/apps2.png" class="dots" alt=""></a>
+      <a class="toplink dotbox" href="#"><img src="icons/apps3.png" class="dots" alt=""></a>
       <a class="toplink" href="#"><img src="icons/m.png" class="avatar" alt=""></a>
     </nav>
   </div>
@@ -219,15 +265,15 @@
   <!--"botnavs" div for bottom nav links-->
   <div class="botnavs">
     <nav class="botnav1">
-      <a class="botlink" href="#">Link1</a>
-      <a class="botlink" href="#">Link2</a>
-      <a class="botlink" href="#">Link3</a>
+      <a class="botlink" href="#">Advertising</a>
+      <a class="botlink" href="#">Business</a>
+      <a class="botlink" href="#">How Search Works</a>
     </nav>
-    <a class="botlink botnav2" href="#">LeafLink</a>
+    <a class="botlink botnav2" href="#"><img src="icons/leaf.png" class="leaf" alt="leaf">Carbon neutral since 2007</a>
     <nav class="botnav3">
-      <a class="botlink" href="#">Link1</a>
-      <a class="botlink" href="#">Link2</a>
-      <a class="botlink" href="#">Link3</a>
+      <a class="botlink" href="#">Privacy</a>
+      <a class="botlink" href="#">Terms</a>
+      <a class="botlink" href="#">Settings</a>
     </nav>
   </div>
 </body>
