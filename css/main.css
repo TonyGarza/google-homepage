@@ -1,0 +1,251 @@
+/*CSS Page for Google Home Page Project by Tony Garza*/
+
+html{
+    height: 100%;
+  }
+  body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .topnavs {
+    height: 50px;
+    width: 100%;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  a.toplink:link{
+    color:#222;
+    text-decoration: none;
+  }
+
+  a.toplink:visited{
+    color: #222;
+  }
+
+  a.toplink:hover{
+    text-decoration: underline;
+  }
+
+  a.botlink{
+    color:gray;
+    text-decoration: none;
+  }
+
+  a.botlink:visited{
+    color:gray;
+  }
+
+  a.botlink:hover{
+    text-decoration: underline;
+  }
+
+  .botnavs {
+    height: 50px;
+    width: 100%;
+    font-size: 14px;
+    background-color: #f2f2f2;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .mid {
+    display: flex;
+    height: 100px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mid-sec {
+    height: 40px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 15px;
+  }
+
+  .search-button{
+    height: 36px;
+    padding: 0px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    margin-right: 5px;
+  }
+
+  .lucky-button{
+    height: 36px;
+    padding: 0px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    margin-left: 5px;
+  }
+
+  .logo {
+    padding-bottom: 15px;
+  }
+
+  #search-box {
+    background-image: url(../icons/search3.png);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position-x: 10px;
+    background-position-y: 8px;
+    text-indent: 33px;
+    flex-basis: 580px;
+    line-height: 44px;
+    border-color: #dfe1e5;
+    border-style: solid;
+    border-radius: 25px;
+  }
+
+  #search-box:hover {
+    box-shadow: 0 1px 6px #202124;
+  }
+
+  #search-box:focus {
+    box-shadow: 0 1px 6px #202124;
+    outline: none;
+  }
+
+  .toplink {
+
+    text-align: center;
+    display: inline-block;
+    margin-left: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .botlink {
+    background-color: #f2f2f2;
+    text-align: center;
+    display: inline-block;
+    padding: 15px 15px;
+  }
+
+  .dots {
+    height: 24px;
+    width: 24px;
+  }
+
+  .dots:hover {
+    background-color: #f2f2f2;
+    border-radius: 50%; 
+    border-color: #f2f2f2;
+    box-shadow: 0 0 0 7px #f2f2f2;
+  }
+
+  .avatar {
+    border-radius: 70%;
+  }
+
+  .avatar:hover {
+    background-color: #f2f2f2;
+    border-radius: 50%; 
+    border-color: #f2f2f2;
+    box-shadow: 0 0 0 7px #f2f2f2;
+  }
+
+  .rightnav {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+  }
+
+  .leftnav{
+    display: flex;
+    align-items: center;
+  }
+
+  .leaf{
+    width: 12px;
+    height: 12px;
+    margin-right: 3px;
+  }
+
+  .botnav1{
+    display: flex;
+    justify-content: flex-start;
+    width: auto;
+  }
+
+  .botnav2{
+    padding-right: 150px;
+  }
+
+  .botnav3{
+    display: flex;
+    justify-content: flex-end;
+    width: auto;
+  }
+
+  @media screen and (max-width: 1150px) {
+    .botnav1 {
+      order: 2;
+      display: flex;
+      align-items: center;
+      width: auto;
+    }
+
+    .botnav2 {
+      order: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding-right: 0px;
+    }
+
+    .botnav3 {
+      order: 3;
+      display: flex;
+      align-items: center;
+      width: auto;
+    }
+    .botnavs{
+      height: auto;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .botnav1 {
+      order: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .botnav2 {
+      order: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding-right: 0px;
+    }
+
+    .botnav3 {
+      order: 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .botnavs{
+      height: auto;
+    }
+  }
